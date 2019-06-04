@@ -5,6 +5,12 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+	.mySlides {display:none}
+	.w3-left, .w3-right, .w3-badge {cursor:pointer}
+	.w3-badge {height:13px;width:13px;padding:0}
+	</style>
 	<head>
 		<title>ABT | Hans von Clemm</title>
 		<meta charset="utf-8" />
@@ -51,13 +57,15 @@
 						<section class="wrapper style5">
 							<div class="inner">
 
-								<a href="https://www.colorado.edu/lab/whiting/"><img src="images/abtLogo.png" alt="abt | BEEM lab" class = "center" width="150" height="150"></a>
+								<a href="https://www.colorado.edu/lab/whiting/"><img src="images/abtLogo.png" alt="abt | BEEM lab" class = "center" width="18%"></a>
 
 
 								<h4>Purpose</h4>
-								<p>The Automated Biodegradation Testbed (ABT) was designed to support an on campus research facility, <a href="https://www.colorado.edu/lab/whiting/">BEEM LAB</a>. BEEM lab (among other things) is developing biodegradable electronics for agricultural use. By  </p>
+								<p>The Automated Biodegradation Testbed (ABT) was designed to support an on campus research facility, <a href="https://www.colorado.edu/lab/whiting/">BEEM LAB</a>. BEEM lab (among other things) is developing biodegradable electronics for agricultural use. By populating a field with sensors that measure pH and moisture content, industrial farms can increase yields while decreasing water and fertilizer use.   </p>
 
-								<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+								<p>Testing the biodegradability of these sensors is traditionally time consuming and requires constant oversight. In order to accelerate BEEM labs research, our team was tasked with eliminating this bottleneck. </p>
+
+								<p>The ABT was designed to run autonomously for 7 days at a time, refreshing the enzyme and maintaining it at a temperature that ensures quick degradation. </p>
 
 								<hr />
 
@@ -67,7 +75,30 @@
 								<hr/>
 
 								<h4>My Role</h4>
-								I was the CAD and Manufacturing Engineer. 
+								<p>I was the CAD and Manufacturing Engineer. All CAD was done wiht SolidWorks. We made ~50 custom parts for the system. </p>
+
+								<p>Some drawings can be seen below.</p>
+
+								<div class="w3-content w3-display-container" style="max-width:92%">
+								  <img class="mySlides" src="images/drwngs/1.png" style="width:100%">
+								  <img class="mySlides" src="images/drwngs/2.png" style="width:100%">
+								  <img class="mySlides" src="images/drwngs/3.png" style="width:100%">
+								  <img class="mySlides" src="images/drwngs/4.png" style="width:100%">
+								  <img class="mySlides" src="images/drwngs/5.png" style="width:100%">
+								  <img class="mySlides" src="images/drwngs/6.png" style="width:100%">
+								  <img class="mySlides" src="images/drwngs/7.png" style="width:100%">
+								  <div class="w3-center w3-container w3-section w3-large w3-text-black w3-display-bottommiddle" style="width:100%">
+								    <div class="w3-left w3-hover-text-blue" onclick="plusDivs(-1)">&#10094;</div>
+								    <div class="w3-right w3-hover-text-blue" onclick="plusDivs(1)">&#10095;</div>
+								    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(1)"></span>
+								    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(2)"></span>
+								    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(3)"></span>
+								    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(4)"></span>
+								    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(5)"></span>
+								    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(6)"></span>
+								    <span class="w3-badge demo w3-border w3-transparent w3-hover-blue" onclick="currentDiv(7)"></span>
+								  </div>
+								</div>
 
 							</div>
 						</section>
@@ -96,6 +127,35 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var slideIndex = 1;
+				showDivs(slideIndex);
+
+				function plusDivs(n) {
+				  showDivs(slideIndex += n);
+				}
+
+				function currentDiv(n) {
+				  showDivs(slideIndex = n);
+				}
+
+				function showDivs(n) {
+				  var i;
+				  var x = document.getElementsByClassName("mySlides");
+				  var dots = document.getElementsByClassName("demo");
+				  if (n > x.length) {slideIndex = 1}
+				  if (n < 1) {slideIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+				    x[i].style.display = "none";  
+				  }
+				  for (i = 0; i < dots.length; i++) {
+				    dots[i].className = dots[i].className.replace(" w3-white", "");
+				  }
+				  x[slideIndex-1].style.display = "block";  
+				  dots[slideIndex-1].className += " w3-white";
+				}
+			</script>
 
 	</body>
 </html>
