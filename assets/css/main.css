@@ -2202,9 +2202,7 @@ input, select, textarea {
 					padding-top: 0;
 				}
 
-				ul.actions.stacked li:second-child{
-					padding-left:10px;
-				}
+
 
 		ul.actions.fit {
 			width: calc(100% + 1em);
@@ -2802,7 +2800,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0 4em 0 ;
+		padding: 2em 0 2em 0 ;
 	}
 
 		.wrapper > .inner {
