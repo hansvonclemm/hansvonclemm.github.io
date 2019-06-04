@@ -3152,6 +3152,9 @@ input, select, textarea {
 
 		.wrapper.style4 {
 			background-color: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		.wrapper.style5 {
