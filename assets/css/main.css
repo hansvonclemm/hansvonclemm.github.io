@@ -2181,8 +2181,9 @@ input, select, textarea {
 		}
 
 			ul.actions.special li:first-child {
-				padding-left: 0;
+				padding-left: 20px;
 			}
+
 
 		ul.actions.stacked {
 			-moz-flex-direction: column;
