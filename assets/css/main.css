@@ -4022,5 +4022,27 @@ input, select, textarea {
 	  margin-left: auto;
 	  margin-right: auto;
 	  width = 25%;
-	  height = width;
 	}
+
+	.video-container{
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+		position:relative;
+		padding-bottom: 56.25%;
+		padding-top: 35px;
+		height:0;
+		overflow:hidden;
+		max-width: 852px
+		max-height: 480px;
+	}
+
+	.video-container iframe{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+
+	}
+
